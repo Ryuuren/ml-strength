@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ML Strength - Sign Up Form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link type="image/png" sizes="32x32" rel="icon" href="../images/favicon.png" />
+    <script src="/javascript/main.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="nav-component"></nav>
+    <main>
+      <section class="heading">
+        <header>
+          <h1>SIGN UP FORM</h1>
+        </header>
+        <section class="social-icons">
+          <a href="#" title="navigate to facebook">
+            <em class="fab fa-facebook-f" alt="facebook icon"></em>
+          </a>
+          <a href="#" title="navigate to facebook messenger">
+            <em class="fab fa-facebook-messenger" alt="facebook messenger icon"></em>
+          </a>
+          <a href="#" title="navigate to twitter">
+            <em class="fab fa-twitter" alt="twitter icon"></em>
+          </a>
+          <a href="#" title="navigate to instagram">
+            <em class="fab fa-instagram" alt="instagram icon"></em>
+          </a>
+          <a href="#" title="navigate to youtube">
+            <em class="fab fa-youtube" alt="youtube icon"></em>
+          </a>
+        </section>
+      </section>
+
+      <section class="form-section">
+        <section class="form-container">
+          <p class="content-paragraph quote">Need help? Scroll down!</p>
+          <form action="confirmation.html">
+            <section class="member-info">
+              <section class="input-container">
+                <label for="first-name" class="details">First Name</label>
+                <em class="fas fa-user-alt"></em>
+                <section class="error-section">
+                  <input
+                    type="text"
+                    placeholder="Enter your first name"
+                    id="first-name"
+                    pattern="[a-zA-Z]{2,20}"
+                    required
+                  />
+                  <span class="error"> Invalid first name - must be between 2 to 20 letters </span>
+                </section>
+              </section>
+
+              <section class="input-container">
+                <label for="last-name" class="details">Last Name</label>
+                <em class="fas fa-user-alt"></em>
+                <section class="error-section">
+                  <input
+                    type="text"
+                    placeholder="Enter your last name"
+                    id="last-name"
+                    pattern="[a-zA-Z]{2,20}"
+                    required
+                  />
+                  <span class="error"> Invalid last name - must be between 2 to 20 letters </span>
+                </section>
+              </section>
+
+              <section class="input-container">
+                <label for="suburb" class="details">Suburb</label>
+                <em class="fas fa-home"></em>
+                <section class="error-section">
+                  <input
+                    type="text"
+                    placeholder="Enter your suburb"
+                    id="suburb"
+                    pattern="^[a-zA-Z_]+( [a-zA-Z_]+)*$"
+                    required
+                  />
+                  <span class="error"> Invalid suburb - must be between 2 to 20 letters </span>
+                </section>
+              </section>
+
+              <section class="input-container">
+                <label for="age" class="details">Age</label>
+                <em class="fas fa-user-clock"></em>
+                <section class="error-section">
+                  <input
+                    type="number"
+                    placeholder="Enter your age"
+                    id="age"
+                    min="18"
+                    max="110"
+                    required
+                  />
+                  <span class="error"> Invalid age - must be at least 18 years old </span>
+                </section>
+              </section>
+
+              <section class="input-container">
+                <label for="mobile" class="details">Mobile</label>
+                <em class="fas fa-phone"></em>
+                <section class="error-section">
+                  <input
+                    type="tel"
+                    placeholder="Enter your number"
+                    id="mobile"
+                    pattern="[0-9]{8,12}"
+                    required
+                  />
+                  <span class="error"> Invalid mobile number - please type without spaces </span>
+                </section>
+              </section>
+
+              <section class="input-container">
+                <label for="email" class="details">Email</label>
+                <em class="fas fa-inbox"></em>
+                <section class="error-section">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    id="email"
+                    pattern="^\S{1,}@\S{1,}[.]\S{1,}$"
+                    maxlength="20"
+                    required
+                  />
+                  <span class="error"> Invalid email address - please use a real domain </span>
+                </section>
+              </section>
+            </section>
+            <section class="question-container">
+              <p class="content-paragraph quote">How did you hear about us?</p>
+              <fieldset class="category">
+                <input
+                  type="radio"
+                  id="word-of-mouth"
+                  name="answer"
+                  value="word_of_mouth"
+                  required
+                />
+                <label for="word-of-mouth">Word of Mouth</label>
+                <input type="radio" id="social-media" name="answer" value="social_media" required />
+                <label for="social-media">Social Media</label>
+                <input
+                  type="radio"
+                  id="online-search"
+                  name="answer"
+                  value="online_search"
+                  required
+                />
+                <label for="online-search">Online Search</label>
+              </fieldset>
+            </section>
+            <section class="button-container">
+              <button type="submit">Register</button>
+              <button type="reset">Reset</button>
+            </section>
+          </form>
+          <p class="content-paragraph quote">Need help? Click the sections below!</p>
+          <button class="collapsible">First Name and Last Name</button>
+          <section class="content">
+            <p>Enter one name for each field using the letters a-z and no spaces.</p>
+          </section>
+          <button class="collapsible">Suburb and Age</button>
+          <section class="content">
+            <p>
+              Enter the suburb where you live (e.g. North Lakes) and select your age by typing the
+              number or using the arrows.
+            </p>
+          </section>
+          <button class="collapsible">Mobile and Email</button>
+          <section class="content">
+            <p>
+              Enter your home/mobile number without spaces, and enter your full email address (e.g.
+              JohnDoe@domain.com).
+            </p>
+          </section>
+          <button class="collapsible">How did you hear about us?</button>
+          <section class="content">
+            <p>Just click the dot that is most relevant to how you found our website.</p>
+          </section>
+          <button class="collapsible">Register / Reset</button>
+          <section class="content">
+            <p>
+              If you made a mistake in the form and want to start again, you can reset every field
+              with the Reset Button. Otherwise, click Register to send your details to us!
+            </p>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer class="footer-component"></footer>
+  </body>
+</html>
